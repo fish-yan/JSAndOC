@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JSAndOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3At-LM-fdb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhN-Q2-ibk">
+                                        <rect key="frame" x="136" y="127" width="48" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="UIView">
+                                            <color key="titleColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="viewBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ymM-pu-uHT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.7251616379310345" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="uhN-Q2-ibk" firstAttribute="centerY" secondItem="3At-LM-fdb" secondAttribute="centerY" id="Qod-Dr-Hyf"/>
+                                    <constraint firstItem="uhN-Q2-ibk" firstAttribute="centerX" secondItem="3At-LM-fdb" secondAttribute="centerX" id="VsL-sx-gQC"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7r-sJ-QNi">
+                                <rect key="frame" x="0.0" y="284" width="320" height="284"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sja-ai-B8w"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="G7r-sJ-QNi" secondAttribute="trailing" id="0e9-Rf-Fhz"/>
+                            <constraint firstItem="G7r-sJ-QNi" firstAttribute="top" secondItem="3At-LM-fdb" secondAttribute="bottom" id="DEp-p5-kgl"/>
+                            <constraint firstItem="3At-LM-fdb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TOR-O3-aLb"/>
+                            <constraint firstItem="G7r-sJ-QNi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UDw-Y7-Ofd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G7r-sJ-QNi" secondAttribute="bottom" id="aea-tw-QSG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3At-LM-fdb" secondAttribute="bottom" id="oBz-Ui-daC"/>
+                            <constraint firstAttribute="trailing" secondItem="3At-LM-fdb" secondAttribute="trailing" id="qeK-n6-UcQ"/>
+                            <constraint firstItem="3At-LM-fdb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sUc-pQ-X2m"/>
+                            <constraint firstItem="3At-LM-fdb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="tRS-hf-suE"/>
+                            <constraint firstItem="3At-LM-fdb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xdh-qD-fzq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TOR-O3-aLb"/>
+                                <exclude reference="oBz-Ui-daC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="viewBtn" destination="uhN-Q2-ibk" id="hYJ-HD-sPd"/>
+                        <outlet property="webView" destination="G7r-sJ-QNi" id="nkJ-87-tse"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
